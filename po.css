@@ -1,0 +1,55 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  border:solid;
+}
+
+header {
+  text-align: center;
+  background-color: #f39ff3;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.section-box {
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 12px;
+  border: 2px solid #ccc;
+  background-color: white;
+}
+.intro {
+  background-color: #d4f7c5;
+}
+
+.about {
+  background-color: #dec9f5;
+}
+
+.courses {
+  background-color: #fdf7b2;
+}
+
+.skills {
+  background-color: #f9b5b5;
+}
+
+.certifications {
+  background-color: #c8e4ff;
+}
+
+.footer {
+  background-color: #ffa77b;
+  text-align: center;
+}
