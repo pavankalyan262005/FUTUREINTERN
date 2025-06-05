@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="t.css">
+    <title>Temperature Converter</title>
+</head>
+<body>
+    <header><h1><b>TEMPERATURE CONVERTER</b></h1></header>
+    <div class="box">
+        <label for="temp"><b>Enter the Temperature:</b></label><br><br>
+        <input type="number" id="temp" placeholder="Enter temperature"><br><br>
+
+        <label><b>Select Unit:</b></label><br>
+        <input type="radio" name="unit" id="celsius" value="celsius">
+        <label for="celsius">Celsius</label><br>
+        <input type="radio" name="unit" id="fahrenheit" value="fahrenheit">
+        <label for="fahrenheit">Fahrenheit</label><br><br>
+
+        <button onclick="convertTemp()">Convert</button><br><br>
+
+        <div id="result"><b>Converted temperature will appear here.</b></div>
+    </div>
+
+    <script>
+        function convertTemp() {
+            const temp = parseFloat(document.getElementById("temp").value);
+            const isCelsius = document.getElementById("celsius").checked;
+            const isFahrenheit = document.getElementById("fahrenheit").checked;
+            const resultDiv = document.getElementById("result");
+
+            if (isNaN(temp)) {
+                resultDiv.innerHTML = "Please enter a valid number.";
+                return;
+            }
+
+            if (isCelsius) {
+                let f = (temp * 9/5) + 32;
+                resultDiv.innerHTML = `${temp}°C is ${f.toFixed(2)}°F`;
+            } else if (isFahrenheit) {
+                let c = (temp - 32) * 5/9;
+                resultDiv.innerHTML = `${temp}°F is ${c.toFixed(2)}°C`;
+            } else {
+                resultDiv.innerHTML = "Please select a unit.";
+            }
+        }
+    </script>
+</body>
+</html>
